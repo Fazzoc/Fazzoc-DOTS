@@ -1,7 +1,124 @@
 
+//--------------------------------OUTPUT--------------------------------//
+output "DP-1" {
+    mode "2560x1440@143.999"
+    scale 1
+    position x=0 y=0
+    variable-refresh-rate on-demand=true
+    focus-at-startup
+}
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1
+    position x=320 y=1440
+}
+
+animations { //defaults only for now
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+}
+
+
+//--------------------------------SESSION--------------------------------//
 hotkey-overlay {
     skip-at-startup
 }
+
+environment {
+    XDG_CURRENT_DESKTOP "KDE"
+    XDG_SESSION_DESKTOP "KDE"
+    XDG_DESKTOP_PORTAL "kde"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    DISPLAY ":0"
+}
+
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "swww-daemon"
+spawn-at-startup "swww img /home/fazzoc/Pictures/Wallpapers/trees.gif"
+spawn-at-startup "quickshell"
+spawn-at-startup "plasma-polkit-agent"
+spawn-at-startup "kded6"
+spawn-at-startup "ksmserver"
+spawn-at-startup "kwalletd6"
+
+
+//--------------------------------WORKSPACE--------------------------------//
+layout {
+    gaps 12
+    center-focused-column "always"
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        off
+    }
+
+    border {
+        width 1
+        active-color "#272727"
+        inactive-color "#272727"
+    }
+
+    shadow {
+        on
+
+        draw-behind-window true
+
+        softness 10
+
+        spread 5
+
+        offset x=0 y=0
+
+        color "#0007"
+    }
+}
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+window-rule {
+    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+
+
+//--------------------------------INPUT--------------------------------//
 input {
     keyboard {
         xkb {
@@ -28,81 +145,10 @@ cursor {
     hide-after-inactive-ms 12000
 }
 
-output "DP-1" {
-    mode "2560x1440@143.999"
-    scale 1
-    position x=0 y=0
-    variable-refresh-rate on-demand=true
-    focus-at-startup
-}
-output "HDMI-A-1" {
-    mode "1920x1080@60.000"
-    scale 1
-    position x=320 y=1440
-}
-
-environment {
-    XDG_CURRENT_DESKTOP "KDE"
-    XDG_SESSION_DESKTOP "KDE"
-    XDG_DESKTOP_PORTAL "kde"
-    DISPLAY ":0"
-}
-spawn-at-startup "xwayland-satellite"
-spawn-at-startup "plasmashell"
-spawn-at-startup "plasma-polkit-agent"
-spawn-at-startup "kded6"
-spawn-at-startup "ksmserver"
-spawn-at-startup "kwalletd6"
-
-layout {
-    gaps 12
-    center-focused-column "always"
-
-    default-column-width { proportion 0.5; }
-
-    focus-ring {
+gestures {
+    hot-corners {
         off
     }
-
-    border {
-        off
-        width 1
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-    }
-
-    shadow {
-        on
-
-        draw-behind-window true
-
-        softness 10
-
-        spread 5
-
-        offset x=0 y=0
-
-        color "#0007"
-    }
-}
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
-animations {
-    
-}
-overview {
-    zoom 0.75
-}
-
-window-rule {
-    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
-    geometry-corner-radius 10
-    clip-to-geometry true
 }
 
 binds {
@@ -119,8 +165,6 @@ binds {
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
-
-    Mod+O repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 
