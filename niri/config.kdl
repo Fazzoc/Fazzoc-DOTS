@@ -4,7 +4,6 @@ output "DP-1" {
     mode "2560x1440@143.999"
     scale 1
     position x=0 y=0
-    variable-refresh-rate on-demand=true
     focus-at-startup
 }
 output "HDMI-A-1" {
@@ -24,6 +23,7 @@ environment {
     XDG_SESSION_DESKTOP "KDE"
     XDG_DESKTOP_PORTAL "kde"
     QT_QPA_PLATFORMTHEME "qt6ct"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
     DISPLAY ":0"
 }
 
@@ -35,6 +35,10 @@ spawn-at-startup "plasma-polkit-agent"
 spawn-at-startup "kded6"
 spawn-at-startup "ksmserver"
 spawn-at-startup "kwalletd6"
+spawn-at-startup "/usr/libexec/xdg-desktop-portal-kde"
+spawn-at-startup "/usr/libexec/kf6/polkit-kde-authentication-agent-1"
+
+
 
 
 //--------------------------------WORKSPACE--------------------------------//
@@ -84,27 +88,28 @@ animations { //defaults only for now
     workspace-switch {
         spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
     }
-
     window-open {
         spring damping-ratio=0.8 stiffness=800 epsilon=0.0001
     }
-
     window-close {
         spring damping-ratio=0.8 stiffness=800 epsilon=0.0001
     }
-
     horizontal-view-movement {
-        spring damping-ratio=1.35 stiffness=1000 epsilon=0.001
+        spring damping-ratio=1.35 stiffness=750 epsilon=0.001
     }
-
     window-movement {
         spring damping-ratio=1.5 stiffness=900 epsilon=0.001
     }
-
     window-resize {
         spring damping-ratio=0.66 stiffness=600 epsilon=0.00203
+        custom-shader r"
+            vec4 resize_color(vec3 coords_curr_geo, vec3 size_curr_geo) {
+                vec3 coords_tex_next = niri_geo_to_tex_next * coords_curr_geo;
+                vec4 color = texture2D(niri_tex_next, coords_tex_next.st);
+                return color;
+            }
+        "
     }
-
     screenshot-ui-open {
         duration-ms 200
         curve "ease-out-cubic"
@@ -129,7 +134,7 @@ input {
         disabled-on-external-mouse
     }
     mouse {
-        accel-speed -0.4
+        accel-speed -0.6
         accel-profile "flat"
     }
 }
@@ -138,7 +143,6 @@ cursor {
     xcursor-size 24
     hide-after-inactive-ms 12000
 }
-
 gestures {
     hot-corners {
         off
