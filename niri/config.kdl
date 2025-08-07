@@ -1,18 +1,3 @@
-
-//--------------------------------OUTPUT--------------------------------//
-output "DP-1" {
-    mode "2560x1440@143.999"
-    scale 1
-    position x=0 y=0
-    focus-at-startup
-}
-output "HDMI-A-1" {
-    mode "1920x1080@60.000"
-    scale 1
-    position x=320 y=1440
-}
-
-
 //--------------------------------SESSION--------------------------------//
 hotkey-overlay {
     skip-at-startup
@@ -21,9 +6,9 @@ hotkey-overlay {
 environment {
     XDG_CURRENT_DESKTOP "KDE"
     XDG_SESSION_DESKTOP "KDE"
-    XDG_DESKTOP_PORTAL "kde"
     QT_QPA_PLATFORMTHEME "qt6ct"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
 }
 
@@ -35,15 +20,10 @@ spawn-at-startup "plasma-polkit-agent"
 spawn-at-startup "kded6"
 spawn-at-startup "ksmserver"
 spawn-at-startup "kwalletd6"
-spawn-at-startup "/usr/libexec/xdg-desktop-portal-kde"
-spawn-at-startup "/usr/libexec/kf6/polkit-kde-authentication-agent-1"
-
-
-
 
 //--------------------------------WORKSPACE--------------------------------//
 layout {
-    gaps 12
+    gaps 8
     center-focused-column "always"
 
     default-column-width { proportion 0.5; }
@@ -60,15 +40,9 @@ layout {
 
     shadow {
         on
-
-        draw-behind-window true
-
         softness 10
-
         spread 5
-
         offset x=0 y=0
-
         color "#0007"
     }
 }
@@ -114,6 +88,20 @@ animations { //defaults only for now
         duration-ms 200
         curve "ease-out-cubic"
     }
+}
+
+
+//--------------------------------OUTPUT--------------------------------//
+output "DP-1" {
+    mode "2560x1440@143.999"
+    scale 1
+    position x=0 y=0
+    focus-at-startup
+}
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1
+    position x=320 y=1440
 }
 
 
