@@ -12,8 +12,6 @@ environment {
     DISPLAY ":0"
 }
 
-spawn-at-startup "swww-daemon"
-spawn-at-startup "swww img ~/Pictures/Wallpapers/trees.gif"
 spawn-at-startup "plasma-polkit-agent"
 spawn-at-startup "quickshell"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
@@ -147,7 +145,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T repeat=false hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+D hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -166,6 +164,11 @@ binds {
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
 
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
+
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-to-monitor-down; }
     Mod+Ctrl+Up    { move-window-to-monitor-up; }
@@ -176,18 +179,10 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Shift+Left  { focus-monitor-left; }
-    Mod+Shift+Down  { focus-monitor-down; }
-    Mod+Shift+Up    { focus-monitor-up; }
-    Mod+Shift+Right { focus-monitor-right; }
-
     Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-
-    Mod+WheelScrollDown      cooldown-ms=150 { focus-monitor-down; }
-    Mod+WheelScrollUp        cooldown-ms=150 { focus-monitor-up; }
 
     Mod+WheelScrollRight      { focus-column-right; }
     Mod+WheelScrollLeft       { focus-column-left; }
@@ -224,6 +219,7 @@ binds {
 
     Mod+Shift+S { screenshot; }
 
-    Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
+    
+    Mod+Escape hotkey-overlay-title="Power Menu" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
 }
