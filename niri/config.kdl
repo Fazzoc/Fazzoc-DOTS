@@ -14,6 +14,8 @@ environment {
 
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swww img ~/Pictures/Wallpapers/trees.gif"
+spawn-at-startup "plasma-polkit-agent"
+spawn-at-startup "quickshell"
 
 //--------------------------------WORKSPACE--------------------------------//
 layout {
@@ -43,7 +45,7 @@ layout {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 window-rule {
-    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
 window-rule {
@@ -87,7 +89,7 @@ animations { //defaults only for now
 
 //--------------------------------OUTPUT--------------------------------//
 output "DP-1" {
-    mode "2560x1440@143.999"
+    mode "2560x1440@239.76"
     scale 1
     position x=0 y=0
     focus-at-startup
