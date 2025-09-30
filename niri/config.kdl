@@ -1,0 +1,217 @@
+//--------------------------------SESSION--------------------------------//
+hotkey-overlay {
+    skip-at-startup
+}
+
+environment {
+    XDG_CURRENT_DESKTOP "KDE"
+    XDG_SESSION_DESKTOP "KDE"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland"
+    DISPLAY ":0"
+}
+
+spawn-at-startup "swww-daemon"
+spawn-at-startup "swww img ~/Pictures/Wallpapers/trees.gif"
+
+//--------------------------------WORKSPACE--------------------------------//
+layout {
+    gaps 8
+    center-focused-column "always"
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        off
+    }
+
+    border {
+        width 1
+        active-color "#272727"
+        inactive-color "#272727"
+    }
+
+    shadow {
+        on
+        softness 10
+        spread 5
+        offset x=0 y=0
+        color "#0007"
+    }
+}
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+window-rule {
+    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+
+animations { //defaults only for now
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+    window-open {
+        spring damping-ratio=0.8 stiffness=800 epsilon=0.0001
+    }
+    window-close {
+        spring damping-ratio=0.8 stiffness=800 epsilon=0.0001
+    }
+    horizontal-view-movement {
+        spring damping-ratio=1.35 stiffness=750 epsilon=0.001
+    }
+    window-movement {
+        spring damping-ratio=1.5 stiffness=900 epsilon=0.001
+    }
+    window-resize {
+        spring damping-ratio=0.66 stiffness=600 epsilon=0.00203
+        custom-shader r"
+            vec4 resize_color(vec3 coords_curr_geo, vec3 size_curr_geo) {
+                vec3 coords_tex_next = niri_geo_to_tex_next * coords_curr_geo;
+                vec4 color = texture2D(niri_tex_next, coords_tex_next.st);
+                return color;
+            }
+        "
+    }
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-cubic"
+    }
+}
+
+
+//--------------------------------OUTPUT--------------------------------//
+output "DP-1" {
+    mode "2560x1440@143.999"
+    scale 1
+    position x=0 y=0
+    focus-at-startup
+}
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1
+    position x=320 y=1440
+}
+
+
+//--------------------------------INPUT--------------------------------//
+input {
+    keyboard {
+        xkb {
+            layout "gb"
+            options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+        }
+    }
+    touchpad {
+        tap
+        accel-speed 0.2
+        accel-profile "flat"
+        scroll-method "two-finger"
+        disabled-on-external-mouse
+    }
+    mouse {
+        accel-speed -0.6
+        accel-profile "flat"
+    }
+}
+cursor {
+    xcursor-theme "volantes_cursors"
+    xcursor-size 24
+    hide-after-inactive-ms 12000
+}
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+binds {
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+
+    Mod+Q repeat=false { close-window; }
+
+    Mod+Left  { focus-column-left; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
+    Mod+Right { focus-column-right; }
+
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Down  { move-window-to-monitor-down; }
+    Mod+Ctrl+Up    { move-window-to-monitor-up; }
+    Mod+Ctrl+Right { move-column-right; }
+
+    Mod+Home { focus-column-first; }
+    Mod+End  { focus-column-last; }
+    Mod+Ctrl+Home { move-column-to-first; }
+    Mod+Ctrl+End  { move-column-to-last; }
+
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
+
+    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-monitor-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-monitor-up; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    Mod+Alt+Left { consume-or-expel-window-left; }
+    Mod+Alt+Right{ consume-or-expel-window-right; }
+
+    Mod+Ctrl+Alt+Left  { consume-window-into-column; }
+    Mod+Ctrl+Alt+Right { expel-window-from-column; }
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+C { center-column; }
+
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    Mod+W { toggle-column-tabbed-display; }
+
+    Mod+Shift+S { screenshot; }
+
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    Mod+Shift+E { quit; }
+    Mod+Shift+P { power-off-monitors; }
+}
