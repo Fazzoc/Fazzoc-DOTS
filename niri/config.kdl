@@ -146,7 +146,6 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T repeat=false hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
