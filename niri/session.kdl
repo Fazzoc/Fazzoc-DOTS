@@ -16,7 +16,7 @@ environment {
 spawn-at-startup "plasma-polkit-agent"
 spawn-at-startup "quickshell"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-spawn-sh-at-startup "qs -c dms-plugin-registry"
+spawn-sh-at-startup "qs -c dms"
 
 config-notification {
     disable-failed
