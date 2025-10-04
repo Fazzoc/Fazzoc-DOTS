@@ -1,0 +1,3 @@
+[submodule "quickshell/dms"]
+	path = quickshell/dms
+	url = https://github.com/AvengeMedia/dms-plugin-registry.git
