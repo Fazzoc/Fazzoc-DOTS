@@ -1,0 +1,25 @@
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+environment {
+    XDG_CURRENT_DESKTOP "KDE"
+    XDG_SESSION_DESKTOP "KDE"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland"
+    DISPLAY ":0"
+}
+
+spawn-at-startup "plasma-polkit-agent"
+spawn-at-startup "quickshell"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-sh-at-startup "qs -c dms"
+
+config-notification {
+    disable-failed
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
