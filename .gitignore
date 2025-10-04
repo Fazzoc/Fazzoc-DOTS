@@ -1,3 +1,4 @@
 *.zip
 .directory
 quickshell/dms/
+/niri/dms
