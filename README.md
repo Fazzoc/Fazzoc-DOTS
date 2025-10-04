@@ -1,2 +1,2 @@
-proper readme coming eventually
+proper readme coming eventually.
 still gotta refine a couple things
