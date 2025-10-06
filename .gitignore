@@ -1,3 +1,6 @@
 *.zip
 .directory
 /niri/dms
+qt5ct/colors/matugen.conf
+qt6ct/colors/matugen.conf
+kitty/dank-theme.conf
