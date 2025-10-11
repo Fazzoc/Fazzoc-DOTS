@@ -4,6 +4,7 @@ hotkey-overlay {
 }
 
 environment {
+    DMS_DISABLE_MATUGEN "1"
     XDG_CURRENT_DESKTOP "KDE"
     XDG_SESSION_DESKTOP "KDE"
     QT_QPA_PLATFORMTHEME "qt6ct"
@@ -14,9 +15,8 @@ environment {
 }
 
 spawn-at-startup "plasma-polkit-agent"
-spawn-at-startup "quickshell"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-spawn-sh-at-startup "qs -c dms"
+spawn-at-startup "dms" "run"
 
 config-notification {
     disable-failed
