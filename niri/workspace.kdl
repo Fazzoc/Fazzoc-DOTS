@@ -2,7 +2,7 @@ layout {
     gaps 8
     center-focused-column "always"
 
-    default-column-width { proportion 0.5; }
+    default-column-width {}
 
     focus-ring {
         off
@@ -32,6 +32,10 @@ window-rule {
     clip-to-geometry true
     draw-border-with-background false
     tiled-state true
+}
+window-rule {
+    match app-id="^(steam|steam_app_.*|wine|Proton)$"
+    open-floating true
 }
 
 animations { //defaults only for now
