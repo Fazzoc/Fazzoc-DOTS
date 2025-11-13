@@ -1,5 +1,6 @@
 layout {
     gaps 8
+    background-color "transparent"
     center-focused-column "always"
 
     default-column-width {}
@@ -35,7 +36,11 @@ window-rule {
 }
 window-rule {
     match app-id="^(steam|steam_app_.*|wine|Proton)$"
-    open-floating true
+    //open-floating true
+}
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
 }
 
 animations { //defaults only for now
