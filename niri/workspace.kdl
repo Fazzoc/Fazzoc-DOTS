@@ -34,10 +34,6 @@ window-rule {
     draw-border-with-background false
     tiled-state true
 }
-window-rule {
-    match app-id="^(steam|steam_app_.*|wine|Proton)$"
-    //open-floating true
-}
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true

@@ -1,4 +1,4 @@
-include "input.kdl"
-include "output.kdl"
 include "session.kdl"
 include "workspace.kdl"
+include "inputs.kdl"
+include "outputs.kdl"
