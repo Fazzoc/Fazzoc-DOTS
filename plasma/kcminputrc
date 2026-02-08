@@ -1,0 +1,37 @@
+[Libinput][0][0][OpenTabletDriver Virtual Artist Tablet]
+CalibrationMatrix=1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1
+MapToWorkspace=true
+OutputArea=0,0,1,1
+OutputName=DP-2
+TabletToolPressureCurve=0.244669,0.604509;0.758367,0.241188;
+
+[Libinput][13364][53296][Keychron  Keychron Link ]
+PointerAcceleration=-0.650
+PointerAccelerationProfile=1
+ScrollFactor=0.5
+ScrollMethod=0
+
+[Libinput][13364][53296][Keychron  Keychron Link  Keyboard]
+Enabled=false
+
+[Libinput][13364][53311][Keychron Keychron M6 ]
+PointerAcceleration=-0.650
+PointerAccelerationProfile=1
+ScrollFactor=0.5
+ScrollMethod=4
+
+[Libinput][13364][53311][Keychron Keychron M6  Keyboard]
+Enabled=false
+
+[Libinput][5215][592][GXT 865 Gaming keyboard GXT 865 Gaming keyboard Consumer Control]
+Enabled=false
+
+[Libinput][6645][12871][Nordic Semiconductor NuPhy Air75 V2 Dongle Keyboard]
+Enabled=true
+
+[Libinput][6645][12871][Nordic Semiconductor NuPhy Air75 V2 Dongle Mouse]
+Enabled=false
+PointerAccelerationProfile=1
+
+[Mouse]
+cursorTheme=volantes_cursors

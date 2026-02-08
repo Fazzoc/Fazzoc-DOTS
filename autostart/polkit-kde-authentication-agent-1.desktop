@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/usr/libexec/kf6/polkit-kde-authentication-agent-1
+Icon=
+Name=polkit-kde-authentication-agent-1
+Path=
+Terminal=False
+Type=Application
