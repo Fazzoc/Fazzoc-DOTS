@@ -131,7 +131,7 @@ widgetStyle=qt6ct-style
 
 [KFileDialog Settings]
 Allow Expansion=false
-Automatically select filename extension=true
+Automatically select filename extension=false
 Breadcrumb Navigation=false
 Decoration position=0
 Show Full Path=false
