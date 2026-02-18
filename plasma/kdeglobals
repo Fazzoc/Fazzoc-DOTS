@@ -127,6 +127,8 @@ Theme=breeze-dark
 [KDE]
 AnimationDurationFactor=0.5
 ShowDeleteCommand=false
+contrast=4
+frameContrast=0.2
 widgetStyle=qt6ct-style
 
 [KFileDialog Settings]

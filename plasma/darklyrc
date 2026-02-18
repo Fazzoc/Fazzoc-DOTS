@@ -1,6 +1,7 @@
 [Common]
 ButtonSize=0
 CornerRadius=8
+FloatingTitlebar=false
 OutlineCloseButton=true
 ShadowSize=ShadowSmall
 ShadowStrength=219

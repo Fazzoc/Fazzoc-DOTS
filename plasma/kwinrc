@@ -109,9 +109,6 @@ DesktopMode=0
 HighlightWindows=false
 ShowTabBox=false
 
-[Tiling]
-padding=4
-
 [Tiling][02ecec31-56cc-5faa-abbf-dde612251247]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -137,9 +134,11 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][6e47c8c4-5a42-4355-aa3b-2d61b1a26092][aefd599f-358d-487b-aefc-06d028119a3e]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6e47c8c4-5a42-4355-aa3b-2d61b1a26092][d5db7912-9dba-482a-a283-13858b4ba3d5]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6e47c8c4-5a42-4355-aa3b-2d61b1a26092][ff64280b-e90d-4bcb-bff8-67ab89cf1476]
@@ -150,6 +149,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Tiling][c5d3dd0f-2673-5a85-aacb-c871b0fc8c13]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Wayland]
+InputMethod[$e]=/usr/share/applications/org.freedesktop.IBus.Panel.Wayland.Gtk3.desktop
 
 [Windows]
 ActivationDesktopPolicy=2
