@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment[en_GB]=
+Comment=
+Exec=polkit-kde-authentication-agent-1
+GenericName[en_GB]=
+GenericName=
+Icon=
+MimeType=
+Name[en_GB]=Start Polkit - Plasma
+Name=Start Polkit - Plasma
+Path=/usr/libexec/kf6/
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
