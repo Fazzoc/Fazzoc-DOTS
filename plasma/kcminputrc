@@ -5,6 +5,17 @@ OutputArea=0,0,1,1
 OutputName=DP-2
 TabletToolPressureCurve=0.244669,0.604509;0.758367,0.241188;
 
+[Libinput][10182][3395][DELL0C38:01 27C6:0D43 Mouse]
+Enabled=false
+
+[Libinput][10182][3395][DELL0C38:01 27C6:0D43 Touchpad]
+ClickMethod=2
+DisableEventsOnExternalMouse=true
+DisableWhileTyping=false
+PointerAcceleration=0.100
+PointerAccelerationProfile=1
+ScrollFactor=0.75
+
 [Libinput][13364][53296][Keychron  Keychron Link ]
 PointerAcceleration=-0.650
 PointerAccelerationProfile=1
@@ -21,6 +32,13 @@ ScrollFactor=0.5
 ScrollMethod=4
 
 [Libinput][13364][53311][Keychron Keychron M6  Keyboard]
+Enabled=false
+
+[Libinput][13364][53311][Keychron M6 Mouse]
+PointerAcceleration=-0.650
+PointerAccelerationProfile=1
+
+[Libinput][2][1][PS/2 Generic Mouse]
 Enabled=false
 
 [Libinput][5215][592][GXT 865 Gaming keyboard GXT 865 Gaming keyboard Consumer Control]
