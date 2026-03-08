@@ -150,9 +150,6 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][c5d3dd0f-2673-5a85-aacb-c871b0fc8c13]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
-[Wayland]
-InputMethod[$e]=/usr/share/applications/org.kde.plasma.keyboard.desktop
-
 [Windows]
 ActivationDesktopPolicy=2
 AutoRaise=true

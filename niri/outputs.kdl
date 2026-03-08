@@ -1,23 +1,23 @@
-output "DP-1" {
+output "DP-1" { // pc display
     mode "2560x1440@239.765"
     scale 1
     position x=0 y=0
     focus-at-startup
     variable-refresh-rate on-demand=true
 }
-output "eDP-1" {
+output "eDP-1" { // laptop display
     mode "1920x1080@144.002"
     scale 1
     position x=0 y=0
     focus-at-startup
     variable-refresh-rate on-demand=true
 }
-output "DP-2" {
+output "DP-2" { // tablet on pc
     mode "1920x1080@60.000"
     scale 1
     position x=320 y=1440
 }
-output "HDMI-A-1" {
+output "HDMI-A-1" { // tablet on laptop
     mode "1920x1080@60.000"
     scale 1
     position x=0 y=1080
