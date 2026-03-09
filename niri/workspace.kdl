@@ -34,6 +34,18 @@ overview {
     }
 }
 
+recent-windows {
+    highlight {
+        active-color "#9dfff880"
+        padding 15
+        corner-radius 8
+    }
+    previews {
+        max-height 256
+        max-scale 1
+    }
+}
+
 window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
