@@ -101,7 +101,6 @@ SaveOnTileEdit=true
 [TabBox]
 ActivitiesMode=0
 DesktopMode=0
-LayoutName=AquaMediumIcons
 
 [TabBoxAlternative]
 ActivitiesMode=0
@@ -154,14 +153,13 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][c5d3dd0f-2673-5a85-aacb-c871b0fc8c13]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
-[Wayland]
-InputMethod[$d]
-
 [Windows]
 ActivationDesktopPolicy=2
 AutoRaise=true
 AutoRaiseInterval=0
+BorderSnapZone=8
 BorderlessMaximizedWindows=true
+WindowSnapZone=8
 
 [Xwayland]
 Scale=1

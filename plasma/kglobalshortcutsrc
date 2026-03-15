@@ -288,7 +288,7 @@ Window to Screen 4=none,,Move Window to Screen 4
 Window to Screen 5=none,,Move Window to Screen 5
 Window to Screen 6=none,,Move Window to Screen 6
 Window to Screen 7=none,,Move Window to Screen 7
-_k_friendly_name=KWin
+_k_friendly_name=System Settings
 disableInputCapture=Meta+Shift+Esc,Meta+Shift+Esc,Disable Active Input Capture
 karousel-column-move-end=none,none,Karousel: Move column to end
 karousel-column-move-left=Meta+Ctrl+Left,none,Karousel: Move column left
@@ -321,6 +321,8 @@ karousel-column-move-to-desktop-9=none,none,Karousel: Move column to desktop 9
 karousel-column-toggle-stacked=none,none,Karousel: Toggle stacked layout for focused column
 karousel-column-width-decrease=none,none,Karousel: Decrease column width
 karousel-column-width-increase=none,none,Karousel: Increase column width
+karousel-column-width-maximize=none,none,Karousel: Increase column width to maximum
+karousel-column-width-minimize=none,none,Karousel: Decrease column width to minimum
 karousel-columns-squeeze-left=none,none,Karousel: Squeeze left column onto the screen
 karousel-columns-squeeze-right=none,none,Karousel: Squeeze right column onto the screen
 karousel-columns-width-equalize=none,none,Karousel: Equalize widths of visible columns
@@ -456,11 +458,11 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,none,Toggle do not disturb
 
+[services][dms-2.desktop]
+_launch=Meta+Space
+
 [services][kitty.desktop]
 _launch=Meta+T
-
-[services][net.local.dms-2.desktop]
-_launch=Meta+Esc
 
 [services][net.local.dms.desktop]
 _launch=Meta+Space

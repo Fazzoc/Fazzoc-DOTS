@@ -56,6 +56,11 @@ window-rule {
     draw-border-with-background false
     tiled-state true
 }
+window-rule {
+    match app-id="steam_app_0"
+    open-floating true
+}
+
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
