@@ -1,6 +1,6 @@
 [ColorEffects:Disabled]
 ChangeSelectionColor=
-Color=4,16,16
+Color=0,0,0
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.65
@@ -11,7 +11,7 @@ IntensityEffect=2
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
-Color=50,75,74
+Color=36,61,60
 ColorAmount=0.025
 ColorEffect=2
 ContrastAmount=0.1
@@ -21,8 +21,8 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=17,30,29
-BackgroundNormal=31,44,44
+BackgroundAlternate=4,16,15
+BackgroundNormal=18,31,31
 DecorationFocus=145,216,136
 DecorationHover=145,216,136
 ForegroundActive=145,216,136
@@ -35,8 +35,8 @@ ForegroundPositive=128,213,210
 ForegroundVisited=189,240,179
 
 [Colors:Complementary]
-BackgroundAlternate=17,30,29
-BackgroundNormal=9,22,21
+BackgroundAlternate=4,16,15
+BackgroundNormal=0,0,0
 DecorationFocus=145,216,136
 DecorationHover=145,216,136
 ForegroundActive=145,216,136
@@ -49,8 +49,8 @@ ForegroundPositive=128,213,210
 ForegroundVisited=189,240,179
 
 [Colors:Header]
-BackgroundAlternate=9,22,21
-BackgroundNormal=21,34,33
+BackgroundAlternate=0,0,0
+BackgroundNormal=8,21,20
 DecorationFocus=145,216,136
 DecorationHover=145,216,136
 ForegroundActive=145,216,136
@@ -63,8 +63,8 @@ ForegroundPositive=128,213,210
 ForegroundVisited=189,240,179
 
 [Colors:Header][Inactive]
-BackgroundAlternate=21,34,33
-BackgroundNormal=9,22,21
+BackgroundAlternate=8,21,20
+BackgroundNormal=0,0,0
 DecorationFocus=145,216,136
 DecorationHover=145,216,136
 ForegroundActive=145,216,136
@@ -77,7 +77,7 @@ ForegroundPositive=128,213,210
 ForegroundVisited=189,240,179
 
 [Colors:Selection]
-BackgroundAlternate=17,30,29
+BackgroundAlternate=4,16,15
 BackgroundNormal=145,216,136
 DecorationFocus=145,216,136
 DecorationHover=145,216,136
@@ -91,8 +91,8 @@ ForegroundPositive=0,80,78
 ForegroundVisited=189,240,179
 
 [Colors:Tooltip]
-BackgroundAlternate=9,22,21
-BackgroundNormal=21,34,33
+BackgroundAlternate=0,0,0
+BackgroundNormal=8,21,20
 DecorationFocus=145,216,136
 DecorationHover=145,216,136
 ForegroundActive=145,216,136
@@ -105,8 +105,8 @@ ForegroundPositive=128,213,210
 ForegroundVisited=189,240,179
 
 [Colors:View]
-BackgroundAlternate=21,34,33
-BackgroundNormal=9,22,21
+BackgroundAlternate=8,21,20
+BackgroundNormal=0,0,0
 DecorationFocus=172,244,161
 DecorationHover=0,57,7
 ForegroundActive=145,216,136
@@ -120,7 +120,7 @@ ForegroundVisited=189,240,179
 
 [Colors:Window]
 BackgroundAlternate=12,83,19
-BackgroundNormal=21,34,33
+BackgroundNormal=8,21,20
 DecorationFocus=145,216,136
 DecorationHover=145,216,136
 ForegroundActive=145,216,136
@@ -195,6 +195,6 @@ activeBackground=12,83,19
 activeBlend=172,244,161
 activeFont=Red Hat Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 activeForeground=172,244,161
-inactiveBackground=9,22,21
+inactiveBackground=0,0,0
 inactiveBlend=176,204,202
 inactiveForeground=176,204,202
