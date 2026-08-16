@@ -1,0 +1,20 @@
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+environment {
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "kde"
+    QT_QPA_PLATFORMTHEME_QT6 "kde"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+}
+
+spawn-at-startup "/usr/libexec/kf6/polkit-kde-authentication-agent-1"
+spawn-at-startup "noctalia"
+
+config-notification {
+    disable-failed
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

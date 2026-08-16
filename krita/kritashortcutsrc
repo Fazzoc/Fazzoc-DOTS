@@ -1,0 +1,10 @@
+[Shortcuts]
+edit_redo=Ctrl+Shift+Z; Ctrl+Y
+eraser_preset_action=Y
+insert_column_left=Shift+Z
+insert_column_right=Shift+X
+insert_hold_column=Alt+Z
+softProof=none
+stop_playback=Shift+Space
+toggle_playback=Ctrl+Space
+undo_polygon_selection=none

@@ -1,0 +1,381 @@
+config_version = 12
+
+[audio]
+enable_sounds = true
+sound_volume = 0.99999997764825821
+
+[backdrop]
+blur_intensity = 0.0
+tint_intensity = 0.0
+
+[bar]
+order = [ "bar" ]
+
+    [bar.bar]
+    background_opacity = 0.59999998658895493
+    capsule = true
+    capsule_opacity = 0.59999998658895493
+    capsule_radius = 8
+    concave_edge_corners = false
+    end = [ "media", "tray", "notifications", "clipboard", "volume", "battery", "weather", "control-center" ]
+    font_family = "Red Hat Mono Medium"
+    margin_edge = 8
+    margin_ends = 8
+    padding = 4
+    panel_overlap = 0
+    radius = 8
+    scale = 0.95000000670552254
+    shadow = false
+    start = [ "launcher", "taskbar", "active_window" ]
+    thickness = 32
+    widget_spacing = 4
+
+        [bar.bar.monitor."PNP(HAT)"]
+        enabled = false
+
+[brightness]
+enable_ddcutil = true
+
+[control_center]
+hidden_tabs = [ "power", "screen-time" ]
+
+    [control_center.calendar]
+    show_events_card = false
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "audio"
+
+[desktop_widgets]
+enabled = false
+
+[dock]
+active_opacity = 0.59999998658895493
+background_opacity = 0.59999998658895493
+concave_edge_corners = false
+inactive_opacity = 0.74999998323619366
+magnification = false
+radius = 8
+shadow = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 3
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 600.0
+
+[keybinds]
+validate = [ "Return" ]
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blur_intensity = 0.0
+tint_intensity = 0.0
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@winit",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@DP-2"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-2"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 1018.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 1492.0
+    output = "winit"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[notification]
+background_opacity = 0.59999998658895493
+history_retention_hours = 3
+
+[osd]
+background_opacity = 0.59999998658895493
+border = false
+
+    [osd.kinds]
+    caffeine = false
+    dnd = false
+    keyboard_backlight = false
+    keyboard_layout = false
+    lock_keys = false
+    media = false
+    nightlight = false
+    privacy = false
+
+[shell]
+button_borders = false
+card_borders = false
+clipboard_history_max_entries = 30
+font_family = "Red Hat Mono Medium"
+polkit_agent = true
+popup_borders = false
+popup_shadows = false
+show_location = false
+
+    [shell.launcher]
+    auto_paste = "off"
+    categories = false
+    compact = true
+    fetch_exchange_rates = false
+    sort_by_usage = false
+
+        [shell.launcher.providers.calculator]
+        global = false
+
+    [shell.panel]
+    borders = false
+    clipboard_position = "top_right"
+    control_center_placement = "floating"
+    control_center_position = "top_right"
+    launcher_position = "top_left"
+    open_near_click_wallpaper = true
+    polkit_position = "top_center"
+    session_placement = "floating"
+    session_position = "center"
+    shadow = false
+    transparency_mode = "glass"
+    wallpaper_placement = "floating"
+    wallpaper_position = "top_right"
+
+    [shell.screenshot]
+    copy_to_clipboard = false
+    freeze_screen = false
+    save_to_file = false
+
+    [shell.session]
+    show_shortcuts = false
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = false
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "5"
+        variant = "destructive"
+
+        [[shell.session.actions]]
+        action = "command"
+        command = "systemctl soft-reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        label = "Userspace Reboot"
+        shortcut = "6"
+        variant = "destructive"
+
+    [shell.shadow]
+    alpha = 0.0
+
+[system.monitor]
+enabled = false
+
+[theme]
+source = "wallpaper"
+wallpaper_scheme = "m3-fruit-salad"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme" ]
+    community_ids = [ "zen-browser" ]
+
+[wallpaper]
+transition = [ "fade" ]
+
+    [wallpaper.default]
+    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
+
+    [wallpaper.last]
+    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
+
+    [wallpaper.monitors.DP-2]
+    path = "/home/fazzoc/Pictures/Wallpapers/art-lake.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
+
+[weather]
+effects = false
+
+[widget.active_window]
+icon_size = 20
+
+[widget.clock]
+format = "{:%b %d - %H:%M}"
+
+[widget.control-center]
+glyph = "adjustments-horizontal"
+
+[widget.launcher]
+glyph = "home"
+
+[widget.media]
+album_art_only = true
+hide_artist = true
+hide_when_no_media = true
+
+[widget.taskbar]
+pinned = [ "org.kde.dolphin", "app.zen_browser.zen", "org.kde.krita", "Blender", "io.github.shiftey.Desktop" ]
+pinned_opacity = 1.0
+
+[widget.volume]
+show_label = false
+
+[widget.weather]
+show_condition = false

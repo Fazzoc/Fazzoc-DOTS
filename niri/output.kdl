@@ -1,0 +1,24 @@
+output "Samsung Electronic Company Odyssey G61SD HNAY500087" { // pc display
+    mode "2560x1440@239.765"
+    scale 1
+    position x=0 y=0
+    focus-at-startup
+    variable-refresh-rate on-demand=true
+}
+output "Samsung Display Corp. ATNA40HQ06-0  Unknown" { // laptop display
+    mode "2880x1800@120.000"
+    scale 1.65
+    position x=0 y=0
+    focus-at-startup
+    variable-refresh-rate on-demand=true
+}
+output "DP-2" { // tablet on pc
+    mode "1920x1080@60.000"
+    scale 1.0
+    position x=320 y=1440
+}
+output "PNP(HAT) GS1562 L56051794302" { // tablet on laptop
+    mode "1920x1080@60.000"
+    scale 1
+    position x=320 y=0
+}

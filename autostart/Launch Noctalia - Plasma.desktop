@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Launch DMS - Plasma
+Exec=noctalia
+Terminal=false
+OnlyShowIn=KDE;
+X-KDE-AutostartScript=true

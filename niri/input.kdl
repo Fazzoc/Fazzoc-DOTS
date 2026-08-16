@@ -1,0 +1,107 @@
+input {
+disable-power-key-handling
+    keyboard {
+        xkb {
+            layout "gb"
+        }
+    }
+    touchpad {
+        tap
+        accel-speed 0.2
+        accel-profile "flat"
+        scroll-method "two-finger"
+    }
+    mouse {
+        accel-speed -0.55
+        accel-profile "flat"
+    }
+}
+cursor {
+    xcursor-theme "volantes_cursors"
+    xcursor-size 24
+    hide-after-inactive-ms 5000
+}
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+binds {
+    Mod+T repeat=false { spawn "kitty"; }
+    Mod+Space repeat=false { spawn-sh "noctalia msg panel-toggle launcher"; }
+
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+
+    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+
+    Mod+Q repeat=false { close-window; }
+
+    Mod+Left  { focus-column-left; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
+    Mod+Right { focus-column-right; }
+
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
+
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Down  { move-window-to-monitor-down; }
+    Mod+Ctrl+Up    { move-window-to-monitor-up; }
+    Mod+Ctrl+Right { move-column-right; }
+
+    Mod+Home { focus-column-first; }
+    Mod+End  { focus-column-last; }
+    Mod+Ctrl+Home { move-column-to-first; }
+    Mod+Ctrl+End  { move-column-to-last; }
+
+    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    Mod+Alt+Left { consume-or-expel-window-left; }
+    Mod+Alt+Right{ consume-or-expel-window-right; }
+
+    Mod+Ctrl+Alt+Left  { consume-window-into-column; }
+    Mod+Ctrl+Alt+Right { expel-window-from-column; }
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+C { center-column; }
+
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    Mod+W { toggle-column-tabbed-display; }
+
+    Mod+Shift+S { screenshot; }
+
+    Mod+Shift+P { power-off-monitors; }
+    
+    Mod+Escape { spawn-sh "noctalia msg panel-toggle session"; }
+    XF86PowerOff { spawn-sh "noctalia msg panel-toggle session"; }
+}
