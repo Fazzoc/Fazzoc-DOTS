@@ -327,7 +327,6 @@ show_location = false
 enabled = false
 
 [theme]
-pure_black_dark = true
 source = "wallpaper"
 wallpaper_scheme = "m3-fruit-salad"
 
