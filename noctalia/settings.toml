@@ -239,6 +239,7 @@ font_family = "Red Hat Mono Medium"
 polkit_agent = true
 popup_borders = false
 popup_shadows = false
+settings_window_translucent = true
 show_location = false
 
     [shell.launcher]
