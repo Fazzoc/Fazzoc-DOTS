@@ -20,5 +20,5 @@ output "DP-2" { // tablet on pc
 output "PNP(HAT) GS1562 L56051794302" { // tablet on laptop
     mode "1920x1080@60.000"
     scale 1.00
-    position x=320 y=1800
+    position x=1745 y=0
 }
