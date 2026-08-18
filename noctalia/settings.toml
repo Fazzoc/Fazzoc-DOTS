@@ -338,10 +338,10 @@ wallpaper_scheme = "m3-fruit-salad"
 transition = [ "fade" ]
 
     [wallpaper.default]
-    path = "/home/fazzoc/Pictures/Wallpapers/art-lake.png"
+    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
 
     [wallpaper.last]
-    path = "/home/fazzoc/Pictures/Wallpapers/art-lake.png"
+    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
 
     [wallpaper.monitors.DP-1]
     path = "/home/fazzoc/Pictures/Wallpapers/art-lake.png"
@@ -359,7 +359,7 @@ effects = false
 icon_size = 20
 
 [widget.clock]
-format = "{:%b %d - %H:%M}"
+format = "{:%d %b - %H:%M}"
 
 [widget.control-center]
 glyph = "adjustments-horizontal"
