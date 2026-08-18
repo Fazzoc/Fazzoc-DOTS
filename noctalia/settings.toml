@@ -338,10 +338,10 @@ wallpaper_scheme = "m3-fruit-salad"
 transition = [ "fade" ]
 
     [wallpaper.default]
-    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
+    path = "/home/fazzoc/Pictures/Wallpapers/art-lake.png"
 
     [wallpaper.last]
-    path = "/home/robert/Pictures/Wallpapers/art-lake.png"
+    path = "/home/fazzoc/Pictures/Wallpapers/art-lake.png"
 
     [wallpaper.monitors.DP-1]
     path = "/home/fazzoc/Pictures/Wallpapers/art-lake.png"
