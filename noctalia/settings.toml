@@ -1,4 +1,4 @@
-config_version = 12
+config_version = 13
 
 [audio]
 enable_sounds = true
@@ -119,6 +119,8 @@ widget_order = [
     cx = 1280.0
     cy = 720.0
     output = "DP-1"
+    placement_height = 0.0
+    placement_width = 0.0
     rotation = 0.0
     type = "login_box"
 
@@ -145,6 +147,8 @@ widget_order = [
     cy = 556.8984375
     enabled = false
     output = "DP-2"
+    placement_height = 0.0
+    placement_width = 0.0
     rotation = 0.0
     type = "login_box"
 
@@ -170,6 +174,8 @@ widget_order = [
     cx = 872.5
     cy = 545.5
     output = "eDP-1"
+    placement_height = 1091.0
+    placement_width = 1745.0
     rotation = 0.0
     type = "login_box"
 
@@ -195,6 +201,8 @@ widget_order = [
     cx = 960.0
     cy = 1492.0
     output = "winit"
+    placement_height = 0.0
+    placement_width = 0.0
     rotation = 0.0
     type = "login_box"
 
@@ -373,6 +381,8 @@ hide_artist = true
 hide_when_no_media = true
 
 [widget.taskbar]
+icon_scale = 1.1000000000000001
+item_spacing = 2
 pinned = [ "org.kde.dolphin", "app.zen_browser.zen", "org.kde.krita", "Blender", "io.github.shiftey.Desktop" ]
 pinned_opacity = 1.0
 
