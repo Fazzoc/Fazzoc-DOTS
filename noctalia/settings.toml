@@ -288,13 +288,6 @@ show_location = false
     show_shortcuts = false
 
         [[shell.session.actions]]
-        action = "lock"
-        countdown_seconds = 0.0
-        enabled = false
-        shortcut = "1"
-        variant = "default"
-
-        [[shell.session.actions]]
         action = "logout"
         countdown_seconds = 0.0
         enabled = true
