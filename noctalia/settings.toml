@@ -1,4 +1,4 @@
-config_version = 13
+config_version = 14
 
 [audio]
 enable_sounds = true
@@ -35,6 +35,8 @@ order = [ "bar" ]
 
 [brightness]
 enable_ddcutil = true
+
+[calendar]
 
 [control_center]
 hidden_tabs = [ "power", "screen-time" ]
@@ -256,6 +258,7 @@ show_location = false
     categories = false
     compact = true
     fetch_exchange_rates = false
+    show_app_origin_indicator = false
     sort_by_usage = false
 
         [shell.launcher.providers.calculator]
@@ -287,7 +290,7 @@ show_location = false
         [[shell.session.actions]]
         action = "lock"
         countdown_seconds = 0.0
-        enabled = true
+        enabled = false
         shortcut = "1"
         variant = "default"
 
@@ -299,14 +302,8 @@ show_location = false
         variant = "default"
 
         [[shell.session.actions]]
-        action = "lock_and_suspend"
-        countdown_seconds = 0.0
-        enabled = false
-        shortcut = "3"
-        variant = "default"
-
-        [[shell.session.actions]]
         action = "reboot"
+        command = "systemctl reboot --no-wall"
         countdown_seconds = 0.0
         enabled = true
         shortcut = "4"
@@ -322,7 +319,7 @@ show_location = false
 
         [[shell.session.actions]]
         action = "command"
-        command = "systemctl soft-reboot"
+        command = "systemctl soft-reboot --no-wall"
         countdown_seconds = 0.0
         enabled = true
         label = "Userspace Reboot"
@@ -384,7 +381,7 @@ hide_when_no_media = true
 [widget.taskbar]
 icon_scale = 1.1000000000000001
 item_spacing = 2
-pinned = [ "org.kde.dolphin", "app.zen_browser.zen", "org.kde.krita", "Blender", "io.github.shiftey.Desktop" ]
+pinned = [ "org.kde.dolphin", "app.zen_browser.zen", "org.kde.krita", "org.blender.Blender", "io.github.shiftey.Desktop" ]
 pinned_opacity = 1.0
 
 [widget.volume]
